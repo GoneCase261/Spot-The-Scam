@@ -8,5 +8,56 @@
     "message": "Hey! Want to hang out at the campus cafe after class? Let me know!",
     "answer": "Legit",
     "explanation": "This is a friendly, genuine message."
+  },
+  {
+    "message": "Dear customer, your bank KYC is pending. Your account will be frozen tonight. Click the link below and enter your full card number, PIN and OTP to keep your account active:\nhttp://update-kyc-now-secure.com",
+    "answer": "Scam",
+    "explanation": "Banks do not threaten instant freezing over SMS links or ask for card number, PIN or OTP on websites or links."
+  },
+  {
+    "message": "You receive ₹200 from an unknown UPI ID with the note: \"Sorry, sent by mistake! Please send ₹2000 back, my app shows error if you send 200 only.\"",
+    "answer": "Scam",
+    "explanation": "Fraudsters send a small amount to gain trust and then trick you into sending a much larger amount back."
+  },
+  {
+    "message": "OfficialBank: \"We detected a new login on your account from a different city. If this was you, ignore this message. If not, please call the number on the back of your card immediately.\"",
+    "answer": "Legit",
+    "explanation": "A genuine alert often tells you to use the official number on your card or app, not a random link or phone number."
+  },
+  {
+    "message": "CONGRATS! You have won a brand new iPhone in our random WhatsApp giveaway. To claim, pay a small processing fee of ₹499 via this UPI ID and share a screenshot within 10 minutes.",
+    "answer": "Scam",
+    "explanation": "Random prize messages that demand an advance payment under time pressure are classic scam patterns."
+  },
+  {
+    "message": "Your friend messages from her usual Instagram account: \"Hey, can you quickly pay this electricity bill for me? I’m travelling, will UPI you back tonight.\" She shares the standard electricity provider link and bill details.",
+    "answer": "Legit",
+    "explanation": "If it is the usual account, normal amount and a recognizable biller link, it can be a genuine favour request."
+  },
+  {
+    "message": "A message claims to be from your college admin: \"Upload your Aadhaar, PAN and bank passbook scan here in the next 30 minutes or your admission will be cancelled. Use this Google Form link shared only with you.\"",
+    "answer": "Scam",
+    "explanation": "Institutions rarely threaten immediate cancellation or use random links to collect sensitive ID plus bank details."
+  },
+  {
+    "message": "A part‑time job ad says: \"Earn ₹5000 a day by liking YouTube videos. Pay a refundable registration fee of ₹999 first to join the VIP group.\"",
+    "answer": "Scam",
+    "explanation": "Job scams often promise very high income for simple tasks but demand an upfront registration or training fee."
+  },
+  {
+    "message": "You get an email using your real name: \"We noticed unusual sign‑in attempts on your email account. Go to Settings > Security > Recent activity in your account to review and secure your login.\" No links are provided.",
+    "answer": "Legit",
+    "explanation": "Legit security alerts can guide you to navigate inside the official app or website instead of clicking external links."
+  },
+  {
+    "message": "You receive an SMS: \"Your income‑tax refund of ₹16,820 is ready. Click here to verify your debit card and ATM PIN to receive immediately: http://fast-tax-refund-now.com\"",
+    "answer": "Scam",
+    "explanation": "Tax departments do not ask for debit card details or ATM PIN through random links to issue refunds."
+  },
+  {
+    "message": "You get a WhatsApp message: \"Instagram Support: Your account will be disabled for copyright violation. Reply with the 6‑digit code you just received by SMS so we can verify and keep your account active.\"",
+    "answer": "Scam",
+    "explanation": "Legit platforms never ask you to share OTPs or verification codes over chat; scammers use these to hijack accounts."
   }
+
 ]

@@ -28,7 +28,7 @@ class SpotTheScam:
     def __init__(self, root):
         self.root = root
         self.root.title("Spot the Scam Quiz")
-        self.root.geometry("900x700")
+        self.root.geometry("900x900")
         self.root.resizable(True, True)
 
         self.score = 0
@@ -101,28 +101,28 @@ class SpotTheScam:
 
         # Button frame
         btn_frame = ctk.CTkFrame(self.main_frame, fg_color="transparent")
-        btn_frame.pack(pady=30)
+        btn_frame.pack(pady=10)
 
         # SCAM button (red theme)
         scam_btn = ctk.CTkButton(btn_frame, text="🚨 SCAM!", width=180, height=60,
                                  font=ctk.CTkFont(size=20, weight="bold"),
                                  fg_color="#ff4757", hover_color="#ff3838",
                                  command=lambda: self.check_ans("Scam"))
-        scam_btn.grid(row=0, column=0, padx=30)
+        scam_btn.grid(row=0, column=0, padx=10)
 
         # LEGIT button (green theme)
         legit_btn = ctk.CTkButton(btn_frame, text="✅ LEGIT", width=180, height=60,
                                   font=ctk.CTkFont(size=20, weight="bold"),
                                   fg_color="#00d4aa", hover_color="#00b894",
                                   command=lambda: self.check_ans("Legit"))
-        legit_btn.grid(row=0, column=1, padx=30)
+        legit_btn.grid(row=0, column=1, padx=10)
 
         # Tips button
         tips_btn = ctk.CTkButton(self.main_frame, text="💡 Scam Spotting Tips",
                                  width=200, height=40, font=ctk.CTkFont(size=16),
                                  fg_color="#ffa502", hover_color="#ff8c00",
                                  command=self.show_tips)
-        tips_btn.pack(pady=20)
+        tips_btn.pack(pady=10)
 
     def check_ans(self, ans):
         q = quiz_data[self.q_no]
@@ -172,7 +172,7 @@ class SpotTheScam:
 
         restart_btn = ctk.CTkButton(btn_frame, text="🔄 Restart Quiz", width=200, height=50,
                                     font=ctk.CTkFont(size=18), fg_color="#667eea",
-                                    command=self.quiz_start)
+                                    command=self.home_page)
         restart_btn.grid(row=0, column=0, padx=20)
 
         exit_btn = ctk.CTkButton(btn_frame, text="🚪 Exit", width=200, height=50,

@@ -1,0 +1,12 @@
+[
+  {
+    "message": "Subject: Urgent! Verify your bank account now.\nDear customer, your account will be suspended unless you click this link and confirm your details.",
+    "answer": "Scam",
+    "explanation": "Legitimate banks will never ask you to verify your account via email links."
+  },
+  {
+    "message": "Hey! Want to hang out at the campus cafe after class? Let me know!",
+    "answer": "Legit",
+    "explanation": "This is a friendly, genuine message."
+  }
+]

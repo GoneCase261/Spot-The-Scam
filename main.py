@@ -80,21 +80,21 @@ class SpotTheScam:
         self.progress = ctk.CTkProgressBar(
             self.main_frame, width=500, height=20)
         self.progress.set((self.q_no + 1) / len(quiz_data))
-        self.progress.pack(pady=(0, 30))
+        self.progress.pack(pady=(0, 10))
 
         # Question label
         q_label = ctk.CTkLabel(self.main_frame, text="📱 Situation:",
                                font=ctk.CTkFont(size=24, weight="bold"))
-        q_label.pack()
+        q_label.pack(padx=1, pady=1)
 
         # Message frame with scroll
-        msg_frame = ctk.CTkScrollableFrame(self.main_frame, height=250, width=700,
-                                           corner_radius=15)
+        msg_frame = ctk.CTkScrollableFrame(self.main_frame, height=140, width=700,
+                                           corner_radius=15, fg_color="#4472f0")
         msg_frame.pack(pady=20, padx=20, fill="x")
 
         q = quiz_data[self.q_no]
-        msg_text = ctk.CTkTextbox(msg_frame, width=650, height=220,
-                                  font=ctk.CTkFont(size=16), fg_color="#2b2b2b")
+        msg_text = ctk.CTkTextbox(msg_frame, width=1050, height=140,
+                                  font=ctk.CTkFont(size=26), fg_color="#4472f0")
         msg_text.insert("0.0", q["message"])
         msg_text.configure(state="disabled")
         msg_text.pack(pady=10, padx=10)
@@ -104,16 +104,16 @@ class SpotTheScam:
         btn_frame.pack(pady=10)
 
         # SCAM button (red theme)
-        scam_btn = ctk.CTkButton(btn_frame, text="🚨 SCAM!", width=180, height=60,
-                                 font=ctk.CTkFont(size=20, weight="bold"),
-                                 fg_color="#ff4757", hover_color="#ff3838",
+        scam_btn = ctk.CTkButton(btn_frame, text="🚨 SCAM!", width=220, height=100,
+                                 font=ctk.CTkFont(size=30, weight="bold",),
+                                 fg_color="#ff4757", hover_color="#cd3030",
                                  command=lambda: self.check_ans("Scam"))
         scam_btn.grid(row=0, column=0, padx=10)
 
         # LEGIT button (green theme)
-        legit_btn = ctk.CTkButton(btn_frame, text="✅ LEGIT", width=180, height=60,
-                                  font=ctk.CTkFont(size=20, weight="bold"),
-                                  fg_color="#00d4aa", hover_color="#00b894",
+        legit_btn = ctk.CTkButton(btn_frame, text="✅ LEGIT", width=220, height=100,
+                                  font=ctk.CTkFont(size=30, weight="bold"),
+                                  fg_color="#00d4aa", hover_color="#019c7d",
                                   command=lambda: self.check_ans("Legit"))
         legit_btn.grid(row=0, column=1, padx=10)
 
@@ -130,11 +130,14 @@ class SpotTheScam:
         expl = q["explanation"]
 
         if ans == correct:
+            self.main_frame.configure(fg_color='green')
             self.score += 1
             messagebox.showinfo("✅ CORRECT!", f"Correct!\n\n{expl}")
+            self.main_frame.configure(fg_color='transparent')
         else:
+            self.main_frame.configure(fg_color='red')
             messagebox.showwarning("❌ WRONG!", f"Oops! Wrong answer\n\n{expl}")
-
+            self.main_frame.configure(fg_color='transparent')
         self.q_no += 1
         if self.q_no < len(quiz_data):
             self.disp_q()

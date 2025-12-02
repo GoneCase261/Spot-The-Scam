@@ -47,14 +47,14 @@ class SpotTheScam:
 
         # Title
         title = ctk.CTkLabel(self.main_frame, text="🚨 SPOT THE SCAM QUIZ 🚨",
-                             font=ctk.CTkFont(size=36, weight="bold"))
+                             font=ctk.CTkFont(size=50, weight="bold",), text_color='#6DC3BB')
         title.pack(pady=(50, 20))
 
         # Subtitle with cyber theme
         subtitle = ctk.CTkLabel(self.main_frame,
                                 text="Read the message carefully and decide: SCAM or LEGIT?",
-                                font=ctk.CTkFont(size=18), text_color="#ff6b6b")
-        subtitle.pack(pady=10)
+                                font=ctk.CTkFont(size=27), text_color="#ff6b6b")
+        subtitle.pack(pady=90)
 
         # Start button with hover effects
         start_btn = ctk.CTkButton(self.main_frame, text="🚀 START QUIZ",
@@ -130,7 +130,7 @@ class SpotTheScam:
         expl = q["explanation"]
 
         if ans == correct:
-            self.main_frame.configure(fg_color='green')
+            self.main_frame.configure(fg_color='#08CB00')
             self.score += 1
             messagebox.showinfo("✅ CORRECT!", f"Correct!\n\n{expl}")
             self.main_frame.configure(fg_color='transparent')

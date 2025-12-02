@@ -89,12 +89,12 @@ class SpotTheScam:
 
         # Message frame with scroll
         msg_frame = ctk.CTkScrollableFrame(self.main_frame, height=140, width=700,
-                                           corner_radius=15, fg_color="#4472f0")
+                                           corner_radius=15, fg_color="#5476d2")
         msg_frame.pack(pady=20, padx=20, fill="x")
 
         q = quiz_data[self.q_no]
         msg_text = ctk.CTkTextbox(msg_frame, width=1050, height=140,
-                                  font=ctk.CTkFont(size=26), fg_color="#4472f0")
+                                  font=ctk.CTkFont(size=26), fg_color="#5476d2")
         msg_text.insert("0.0", q["message"])
         msg_text.configure(state="disabled")
         msg_text.pack(pady=10, padx=10)
@@ -130,12 +130,12 @@ class SpotTheScam:
         expl = q["explanation"]
 
         if ans == correct:
-            self.main_frame.configure(fg_color='#08CB00')
+            self.main_frame.configure(fg_color="#29B745")
             self.score += 1
             messagebox.showinfo("✅ CORRECT!", f"Correct!\n\n{expl}")
             self.main_frame.configure(fg_color='transparent')
         else:
-            self.main_frame.configure(fg_color='red')
+            self.main_frame.configure(fg_color="#D43939")
             messagebox.showwarning("❌ WRONG!", f"Oops! Wrong answer\n\n{expl}")
             self.main_frame.configure(fg_color='transparent')
         self.q_no += 1
